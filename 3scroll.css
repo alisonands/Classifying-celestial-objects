@@ -1,0 +1,48 @@
+body{
+    background-color: #131316;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    padding:0;
+    margin:0'
+}
+
+section{
+    display: grid;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.hidden{
+    opacity:0;
+    transition: all 7s;
+
+}
+
+.show{
+    opacity: 1;
+}
+
+nav{
+    height: 80px;
+    /* background: rgb(119, 46, 195); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw-1300px)/2)
+}
+
+.logo{
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 1.5rem;
+}

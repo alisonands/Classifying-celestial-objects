@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- LOCAL CSS -->
+    <link rel="stylesheet" href="3scroll.css">
+
+    <!-- GOOGLE POPPINS FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!-- Include React library -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- Include ReactDOM library -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">PLANET</div>
+        <div class="nav-items">
+            <a href="/">HOME</a>
+            <a href="/">ABOUT</a>
+            <a href="/">CONTACT</a>
+        </div>
+    </nav>
+    <section>
+        <h2>
+            Hello!
+        </h2>
+        <p>
+            This is a test
+        </p>
+    </section>
+    <section class='hidden'>
+        <p>
+            How goes life
+        </p>
+        <div id="root">hihi</div>
+        <script>
+            const Component = () => {
+            const parallax = useParallax<HTMLDivElement>({
+              rotate: [0, 360],
+            });
+            return (
+              <div ref={parallax.ref} className="spinner">
+                😵‍💫
+                <div className="diamond">💎</div>
+                <div className="clown">🤡</div>
+                <div className="money">💰</div>
+                <div className="hand">👌🏻</div>
+              </div>
+            );
+          };
+          ReactDOM.render(
+            React.createElement(Component),
+            document.getElementById('root')
+            );
+        </script>
+        
+    </section>
+    <section class='hidden'>
+        <p>
+            This is taking up too much of my time
+        </p>
+    </section>
+    <section class='hidden'>
+        <p>
+            Another test section bloop
+        </p>
+    </section>
+
+</body>
+
+<script src="3scroll.js"></script>
+<script src="3scroll_rotate.js"></script>
+
+</html>
