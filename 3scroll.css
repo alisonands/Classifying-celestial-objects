@@ -39,8 +39,8 @@ section{
 }
 
 .button {
-    height: 90px; /* Adjust height */
-    width: 90px; /* Adjust width */
+    height: 70px; /* Adjust height */
+    width: 70px; /* Adjust width */
     background-color: #eae6da; 
     border: 2px solid #eae6da;
     align-items: center;
@@ -66,7 +66,7 @@ section{
 .button:active {
     background-color: #131316;
     box-shadow: 0 5px #eae6da;
-    transform: translateY(4px);
+    transform: translateX(4px);
 }
 
 .rotate--10s{
@@ -100,6 +100,20 @@ section{
     -webkit-animation: spin 50s linear infinite;
     -moz-animation: spin 50s linear infinite;
     animation: spin 50s linear infinite;
+}
+
+.rotate-200s{
+    position: relative;
+    -webkit-animation: spin 200s linear infinite;
+    -moz-animation: spin 200s linear infinite;
+    animation: spin 200s linear infinite;
+}
+
+.rotate--200s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 120s linear infinite;
+    -moz-animation: spin-cclockwise 120s linear infinite;
+    animation: spin-cclockwise 120s linear infinite;
 }
 
 @-webkit-keyframes spin{
@@ -152,8 +166,8 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 150px;
-    height: 150px;
+    width: 210px;
+    height: 210px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
@@ -200,13 +214,39 @@ section{
     justify-content: center;
 }
 
+.orbit-container-2_5 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 900px;
+    height: 900px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
 .orbit-container-3 {
     position: relative;
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 1000px;
-    height: 1000px;
+    width: 1100px;
+    height: 1100px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container-4 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 1200px;
+    height: 1200px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
