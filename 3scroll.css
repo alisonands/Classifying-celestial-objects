@@ -12,10 +12,11 @@
 .small{
     top: 0;
     left:0;
-    width: 6px;
-    height: 6px;
+    width: 2px;
+    height: 2px;
     border: 2px solid #eae6da;
     border-radius: 50%;
+    background-color: #eae6da;
     z-index: 9999;
     position: absolute;
 }
@@ -115,21 +116,21 @@ section{
 
 @-webkit-keyframes spin-cclockwise {
     100% {
-        -webkit-transform: rotate(-360deg); /* Change the direction to negative */
-        transform: rotate(-360deg); /* Also add this for compatibility */
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg); 
     }
 }
 
 @-moz-keyframes spin-cclockwise {
     100% {
-        -moz-transform: rotate(-360deg); /* Change the direction to negative */
-        transform: rotate(-360deg); /* Also add this for compatibility */
+        -moz-transform: rotate(-360deg);
+        transform: rotate(-360deg); 
     }
 }
 
 @keyframes spin-cclockwise {
     100% {
-        transform: rotate(-360deg); /* Change the direction to negative */
+        transform: rotate(-360deg); 
     }
 }
 
@@ -137,11 +138,11 @@ section{
 .planet {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 177px); /* Adjust distance from the center */
-    left: calc(50% + 177px); /* Adjust distance from the center */
-    width: 30px; /* Adjust planet size */
-    height: 30px; /* Adjust planet size */
-    background-image: url('img/planet.png'); /* Adjust planet color */
+    top: calc(50% - 177px); /* distance from the center */
+    left: calc(50% + 177px); /* distance from the center */
+    width: 30px; 
+    height: 30px;
+    background-image: url('img/planet.png'); 
     background-size: cover;
     border-radius: 50%;
 }
