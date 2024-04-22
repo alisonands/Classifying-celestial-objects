@@ -28,6 +28,19 @@ body{
     padding:0;
     margin:0;
     cursor: none;
+    /* background-image: url('img/stardust.png'); */
+    /* opacity: 0.5; */
+}
+.star-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/stardust.png');
+    pointer-events: none;
+    z-index: -1;
+    animation: spin-cclockwise 100s linear infinite;
 }
 
 section{
@@ -69,13 +82,6 @@ section{
     transform: translateX(4px);
 }
 
-.rotate--10s{
-    position: relative;
-    -webkit-animation: spin-cclockwise 10s linear infinite;
-    -moz-animation: spin-cclockwise 10s linear infinite;
-    animation: spin-cclockwise 40s linear infinite;
-}
-
 .rotate-10s{
     position: relative;
     /* top: 50%; */
@@ -87,6 +93,12 @@ section{
     -moz-animation: spin 10s linear infinite;
     animation: spin 10s linear infinite;
 }
+.rotate--10s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 10s linear infinite;
+    -moz-animation: spin-cclockwise 10s linear infinite;
+    animation: spin-cclockwise 10s linear infinite;
+}
 
 .rotate-20s{
     position: relative;
@@ -94,12 +106,50 @@ section{
     -moz-animation: spin 20s linear infinite;
     animation: spin 20s linear infinite;
 }
+.rotate--20s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 20s linear infinite;
+    -moz-animation: spin-cclockwise 20s linear infinite;
+    animation: spin-cclockwise 20s linear infinite;
+}
+
 
 .rotate-50s{
     position: relative;
     -webkit-animation: spin 50s linear infinite;
     -moz-animation: spin 50s linear infinite;
     animation: spin 50s linear infinite;
+}
+.rotate--50s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 50s linear infinite;
+    -moz-animation: spin-cclockwise 50s linear infinite;
+    animation: spin-cclockwise 50s linear infinite;
+}
+
+.rotate-100s{
+    position: relative;
+    -webkit-animation: spin 100s linear infinite;
+    -moz-animation: spin 100s linear infinite;
+    animation: spin 100s linear infinite;
+}
+.rotate--100s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 100s linear infinite;
+    -moz-animation: spin-cclockwise 100s linear infinite;
+    animation: spin-cclockwise 100s linear infinite;
+}
+.rotate-150s{
+    position: relative;
+    -webkit-animation: spin 150s linear infinite;
+    -moz-animation: spin 150s linear infinite;
+    animation: spin 150s linear infinite;
+}
+.rotate--150s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 150s linear infinite;
+    -moz-animation: spin-cclockwise 150s linear infinite;
+    animation: spin-cclockwise 150s linear infinite;
 }
 
 .rotate-200s{
@@ -111,9 +161,9 @@ section{
 
 .rotate--200s{
     position: relative;
-    -webkit-animation: spin-cclockwise 120s linear infinite;
-    -moz-animation: spin-cclockwise 120s linear infinite;
-    animation: spin-cclockwise 120s linear infinite;
+    -webkit-animation: spin-cclockwise 200s linear infinite;
+    -moz-animation: spin-cclockwise 200s linear infinite;
+    animation: spin-cclockwise 200s linear infinite;
 }
 
 @-webkit-keyframes spin{
@@ -147,19 +197,106 @@ section{
         transform: rotate(-360deg); 
     }
 }
+.dot1{
+    top: calc(50% - 216px); /* distance from the center */
+    left: calc(50% + 216px); /* distance from the center */
+    width: 2px;
+    height: 2px;
+    border: 2px solid #eae6da;
+    border-radius: 50%;
+    background-color: #eae6da;
+    z-index: 9999;
+    position: absolute;
+}
 
+.dot2{
+    top: calc(50% - 321px); /* distance from the center */
+    left: calc(50% + 321px); /* distance from the center */
+    width: 2px;
+    height: 2px;
+    border: 2px solid #eae6da;
+    border-radius: 50%;
+    background-color: #eae6da;
+    z-index: 9999;
+    position: absolute;
+}
 
-.planet {
+.p1 {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 177px); /* distance from the center */
-    left: calc(50% + 177px); /* distance from the center */
-    width: 30px; 
-    height: 30px;
-    background-image: url('img/planet.png'); 
+    top: calc(50% - 175px); /* distance from the center */
+    left: calc(50% + 175px); /* distance from the center */
+    width: 75px; 
+    height: 75px;
+    background-image: url('img/p1.png'); 
     background-size: cover;
     border-radius: 50%;
 }
+
+
+
+
+.p3 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 105px); /* distance from the center */
+    left: calc(50% + 105px); /* distance from the center */
+    width: 90px; 
+    height: 90px;
+    background-image: url('img/p3.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p4 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 265px); /* distance from the center */
+    left: calc(50% + 265px); /* distance from the center */
+    width: 50px; 
+    height: 50px;
+    background-image: url('img/p4.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p5 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 316px); /* distance from the center */
+    left: calc(50% + 316px); /* distance from the center */
+    width: 75px; 
+    height: 75px;
+    background-image: url('img/p5.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p6 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 390px); /* distance from the center */
+    left: calc(50% + 390px); /* distance from the center */
+    width: 100px; 
+    height: 100px;
+    background-image: url('img/p6.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p10 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 425px); /* distance from the center */
+    left: calc(50% + 425px); /* distance from the center */
+    width: 40px; 
+    height: 40px;
+    background-image: url('img/p10.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+
 
 .orbit-container--1 {
     position: relative;
