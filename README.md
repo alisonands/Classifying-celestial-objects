@@ -15,7 +15,8 @@
 [SDSS skysurvey](https://skyserver.sdss.org/dr9/en/help/browser/browser.asp)\
 [SQL queries](https://skyserver.sdss.org/dr9/en/tools/search/sql.asp)
 
+## References
+- [Wavelengths](https://voyages.sdss.org/preflight/light/filters/)
 
 ### Resources
 - [TeX for html](https://www.maths.nottingham.ac.uk/plp/pmadw/lm.html)
-- [Wavelengths](https://voyages.sdss.org/preflight/light/filters/)
