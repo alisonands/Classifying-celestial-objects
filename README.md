@@ -1,5 +1,5 @@
 # Classification and regression analysis on planets, stars, and galaxies
-## Main questions to be addressed:
+## Main analysis:
 1. The mass of stars, planets, and other celestial bodies are determined through their relationships with flux, density, temperature, and radii. Can machine learning models predict the mass of planets without this knowledge, based on other factors of the planetary system, such as ellipticity of the orbits and the light curve of the star. 
 2. Distinguishing between stars, galaxies, and QSOs.
 - A common method of analysis when distinguishing between dots of light in the sky is through analysis of the light that they emit. Using the spectral bands u, g, r, i, and z of three classes of objects (galaxies, QSOs and stars), we will test between SVC, Decision Trees, and Random Forests, to determine if we can develop a strong model to predict the classification of these objects, and which model returns the highest accuracy.
