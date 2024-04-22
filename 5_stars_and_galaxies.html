@@ -33,12 +33,89 @@
         </div>
     </nav>
     <section class="hidden">
-        hihi
+        <h2>Classifying Stars and Galaxies</h2>
+    </section>
+    <section>
+        <p class="center-text">
+            Celestial images too far to be classified by the naked eye are analysed through imaging within and outside of the visible spectrum.
+            In classifying stars and galaxies, the filters u, g, i, r and z are used, representing the following wavelengths:
+        </p>
+        <table>
+            <tr>
+              <th style="background-color: #403e39;">Filter</th>
+              <th style="background-color: #403e39;">Type of Light</th> 
+            </tr>
+            <tr>
+              <td>u'</td>
+              <td>Ultraviolet light</td>
+            </tr>
+            <tr>
+              <td>g'</td>
+              <td>Blue and green visible light</td>
+            </tr>
+            <tr>
+              <td>r'</td>
+              <td>Yellow and red visible light</td>
+            </tr>
+            <tr>
+              <td>i'</td>
+              <td>Near-infrared light</td>
+            </tr>
+            <tr>
+              <td>z'</td>
+              <td>Near-infrared light</td>
+            </tr>
+          </table>
+        <br>
+        <img src="img/wavelengths.png" alt="wavelengths" style="width: 50%; height: auto;">
+        <a href="https://voyages.sdss.org/preflight/light/filters/", style="font-size: small; color: #737993;">Image Source</a>
     </section>
 
+    <section class="hidden">
+        The dataset used in this analysis is as follows:
+        
+    </section>
+
+    <section class="hidden">
+        <table>
+            <tr>
+              <th>precision</th>
+              <th>recall</th>
+              <th>f1-score</th>
+              <th>support</th>
+            </tr>
+            <tr>
+              <td>0.95</td>
+              <td>0.93</td>
+              <td>0.94</td>
+              <td>6237 (GALAXY)</td>
+            </tr>
+            <tr>
+              <td>0.69</td>
+              <td>0.76</td>
+              <td>0.72</td>
+              <td>983 (QSO)</td>
+            </tr>
+            <tr>
+              <td>0.85</td>
+              <td>0.87</td>
+              <td>0.86</td>
+              <td>3280 (STAR)</td>
+            </tr>
+            <tr>
+              <td colspan="4">accuracy: 0.90 (total samples: 10500)</td>
+            </tr>
+            <tr>
+              <td colspan="4">macro avg: precision: 0.83, recall: 0.85, f1-score: 0.84, support: 10500</td>
+            </tr>
+            <tr>
+              <td colspan="4">weighted avg: precision: 0.90, recall: 0.90, f1-score: 0.90, support: 10500</td>
+            </tr>
+          </table>
+    </section>
 </body>
 
-<!-- <script src="static/js/4_ML.js"></script> -->
-<!-- <script src="4_ML.css"></script> -->
+<script src="static/js/4_ML.js"></script>
+<script src="4_ML.css"></script>
 
 </html>
