@@ -64,7 +64,8 @@
         </p>
     </section>
     <section class="hidden">
-        <p>The following is a sample of the dataset. The mass will be the y variable trained on the other properties.</p>
+        <p>The following is a sample of the dataset. The mass will be the y variable trained on the other properties.
+        </p>
         <table>
             <thead>
                 <tr>
@@ -76,7 +77,7 @@
                     <th>orbital_period</th>
                     <th style="background-color: #403e39;">mass</th>
                 </tr>
-            </thead>    
+            </thead>
             <tbody>
                 <tr>
                     <td>2M 2140+16 b</td>
@@ -128,18 +129,49 @@
 
     </section>
 
-    <section class = "hidden">
-        **Plots and final data go here**
+    <section class="hidden">
+        Decision Trees vs. Random Forests
+        <img src="img/with_MTD.jpg" style="width: 75%; height: auto;">
     </section>
 
-    <section class = "hidden">
+    <section class="hidden">
+        Median Differences
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Decision Tree</th>
+                    <th>Random Forest</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>With mass, temp, dens</td>
+                    <td>20.34</td>
+                    <td>12.40</td>
+                </tr>
+                <tr>
+                    <td>Wo mass, temp, dens</td>
+                    <td>92.65</td>
+                    <td>156.08</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="hidden">
+        <div class="center">
+            <iframe src="img/rf.html" width="1200" height="1000" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <section class="hidden">
         Results and final analysis
     </section>
 
 </body>
 
-<script src="2cursor.js"></script>
-<script src="3scroll.js"></script>
-<!-- <script src="3scroll_rotate.js"></script> -->
+<!-- <script src="2cursor.js"></script> -->
+<script src="4_ML.js"></script>
+<script src="4_ML.css"></script>
 
 </html>
