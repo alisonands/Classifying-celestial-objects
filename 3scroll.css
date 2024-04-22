@@ -241,8 +241,8 @@ section{
     /* Set polar coordinates for planet position */
     top: calc(50% - 105px); /* distance from the center */
     left: calc(50% + 105px); /* distance from the center */
-    width: 90px; 
-    height: 90px;
+    width: 70px; 
+    height: 70px;
     background-image: url('img/p3.png'); 
     background-size: cover;
     border-radius: 50%;
