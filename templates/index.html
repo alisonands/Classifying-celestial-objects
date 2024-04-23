@@ -7,7 +7,8 @@
     <title>Homepage</title>
 
     <!-- LOCAL CSS -->
-    <link rel="stylesheet" href="static/css/3scroll.css">
+    <link rel="stylesheet" href="../static/css/3scroll.css">
+    <link rel="stylesheet" href="../static/css/3meteor.css">
 
     <!-- GOOGLE POPPINS FONT -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -30,26 +31,33 @@
 
 <body>
     <div class="star-background"></div>
-    <div class="small class='fa-solid fa-star'"></div>
+
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+
+    <!-- <div class="small"></div> -->
+    <!-- <div class="small class='fa-solid fa-star'"></div> -->
     <nav>
-        <div class="logo">PLANET</div>
+        <div class="logo"><a href="index.html">HOME</a></div>
         <div class="nav-items">
-            <a href="/">HOME</a>
             <a href="4_ML.html">MASS</a>
-            <a href="/">STAR OR GALAXY</a>
+            <a href="5_stars_and_galaxies.html">STAR OR GALAXY</a>
         </div>
     </nav>
-    <section>
+    <section class="hidden">
         <!-- <button type="button" class="btn">Base class</button> -->
-        <h2>
-            Hello!
-        </h2>
         <div class="orbit-container-4 rotate-200s">
             <div class="p10 rotate-10s"></div>
-            <div class="dot1 rotate-10s"></div>
             <div class="orbit-container-3 rotate-200s">
                 <div class="p6 rotate-10s"></div>
-                <div class="dot2 rotate--10s"></div>
                 <div class="orbit-container-2_5 rotate--150s">
                     <div class="p5 rotate-10s"></div>
                     <div class="orbit-container-2 rotate--50s">
@@ -59,6 +67,7 @@
                             <div class="orbit-container rotate-50s">
                                 <div class="p3 rotate-10s"></div>
                                 <div class="orbit-container--1 rotate--10s">
+                                    <div class="p2 rotate-10s"></div>
                                     <a href="4_ML.html">
                                         <div class="button rotate-20s">
                                             <i class="fa-solid fa-star"></i>
@@ -71,44 +80,40 @@
                 </div>
             </div>
         </div>
-
-
-
-        <p>
-            This is a test
-        </p>
     </section>
     <section class='hidden'>
-        <p>
-            How goes life
+        <h1>Applying Machine Learning Methods to celestial objects</h1>
+        <p class="center-text">The goal of this project focusses on applying regression and classification machine learning methods to two datasets:
+            <ol class="left-text">
+                <li>
+                    The mass of stars, planets, and other celestial bodies are 
+                    determined through their relationships with flux, density, 
+                    temperature, and radii. Can machine learning models predict 
+                    the mass of planets without this knowledge? We apply other 
+                    factors of the planetary system, such as ellipticity of the 
+                    orbits and the light curve of the star to Decision Tree and 
+                    Random Forest Classifiers, to determine if ML models can derive 
+                    relationships between variables.
+                </li>
+                <br>
+                <li>
+                    Distinguishing between stars, galaxies, and QSOs. <br>
+                    A common method of analysis when distinguishing between dots 
+                    of light in the sky is through analysis of the light that they 
+                    emit. Using the spectral bands u, g, r, i, and z of three classes 
+                    of objects (galaxies, QSOs and stars), we will test between SVC, 
+                    Decision Trees, and Random Forests, to determine if we can develop 
+                    a strong model to predict the classification of these objects, and 
+                    which model returns the highest accuracy.
+                </li>
+            </ol>
         </p>
-        <div id="root">hihi</div>
-        <img class="rotate" src="img/planet.png" alt="planet-with-ring">
-        <script>
-            const Component = () => {
-                const parallax = useParallax < HTMLDivElement > ({
-                    rotate: [0, 360],
-                });
-                return (
-                    <div ref={parallax.ref} className="spinner">
-                        😵‍💫
-                        <div className="diamond">💎</div>
-                        <div className="clown">🤡</div>
-                        <div className="money">💰</div>
-                        <div className="hand">👌🏻</div>
-                    </div>
-                );
-            };
-            ReactDOM.render(
-                React.createElement(Component),
-                document.getElementById('root')
-            );
-        </script>
 
     </section>
     <section class='hidden'>
+        <img class="rotate" src="../static/img/planets.png" alt="planet-with-ring" style="width: 50%;">
         <p>
-            This is taking up too much of my time
+            
         </p>
     </section>
     <section class='hidden'>
@@ -119,7 +124,8 @@
 
 </body>
 
-<script src="static/js/3cursor.js"></script>
-<script src="static/js/3scroll.js"></script>
+<script src="../static/js/3cursor.js"></script>
+<script src="../static/js/3scroll.js"></script>
+<script src="../static/js/3meteor.js"></script>
 
 </html>

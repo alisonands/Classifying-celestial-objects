@@ -12,14 +12,15 @@
 .small{
     top: 0;
     left:0;
-    width: 2px;
-    height: 2px;
+    width: 1px;
+    height: 1px;
     border: 2px solid #eae6da;
     border-radius: 50%;
     background-color: #eae6da;
     z-index: 9999;
-    position: absolute;
-}
+    position: relative;
+    animation: moveMeteor 5s linear infinite; 
+}  
 
 body{
     background-color: #10100f;
@@ -27,7 +28,7 @@ body{
     font-family: 'Poppins', sans-serif;
     padding:0;
     margin:0;
-    cursor: none;
+    /* cursor: none; */
     /* background-image: url('img/stardust.png'); */
     /* opacity: 0.5; */
 }
@@ -37,10 +38,13 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../../img/stardust.png');
+    background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    pointer-events: none;
+    background-size: cover; /* Ensures the background image covers the entire background area */
+    background-position: center; /* Centers the background image */
     pointer-events: none;
     z-index: -1;
-    animation: spin-cclockwise 100s linear infinite;
+    /* animation: spin-cclockwise 100s linear infinite; */
 }
 
 section{
@@ -49,37 +53,6 @@ section{
     place-content: center;
     place-items: center;
     min-height: 100vh;
-}
-
-.button {
-    height: 70px; /* Adjust height */
-    width: 70px; /* Adjust width */
-    background-color: #eae6da; 
-    border: 2px solid #eae6da;
-    align-items: center;
-    place-content: center;
-    place-items: center;
-    color: #2c2a26;
-    line-height: 90px; /* Adjust line-height */
-    padding: 0; /* Remove padding */
-    text-align: center;
-    text-decoration: none;
-    text-decoration-color: #2c2a26;
-    display: inline-block;
-    font-size: 50px;
-    border-radius: 50%;
-}
-
-
-.button:hover {
-    background-color: #131316; 
-    color: #eae6da;
-}
-
-.button:active {
-    background-color: #131316;
-    box-shadow: 0 5px #eae6da;
-    transform: translateX(4px);
 }
 
 .rotate-10s{
@@ -197,53 +170,69 @@ section{
         transform: rotate(-360deg); 
     }
 }
-.dot1{
-    top: calc(50% - 216px); /* distance from the center */
-    left: calc(50% + 216px); /* distance from the center */
-    width: 2px;
-    height: 2px;
-    border: 2px solid #eae6da;
+
+.button {
+    height: 35px; /* Adjust height */
+    width: 35px; /* Adjust width */
+    background-color: #eae6da; 
+    border: 1px solid #eae6da; /* Adjust border */
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    color: #2c2a26;
+    line-height: 45px; /* Adjust line-height */
+    padding: 0; /* Remove padding */
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: #2c2a26;
+    display: inline-block;
+    font-size: 25px; /* Adjust font size */
     border-radius: 50%;
-    background-color: #eae6da;
-    z-index: 9999;
-    position: absolute;
 }
 
-.dot2{
-    top: calc(50% - 321px); /* distance from the center */
-    left: calc(50% + 321px); /* distance from the center */
-    width: 2px;
-    height: 2px;
-    border: 2px solid #eae6da;
-    border-radius: 50%;
-    background-color: #eae6da;
-    z-index: 9999;
-    position: absolute;
+.button:hover {
+    background-color: #131316; 
+    color: #eae6da;
+}
+
+.button:active {
+    background-color: #131316;
+    box-shadow: 0 2px #eae6da;
+    transform: translateX(2px);
 }
 
 .p1 {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 175px); /* distance from the center */
-    left: calc(50% + 175px); /* distance from the center */
-    width: 75px; 
-    height: 75px;
-    background-image: url('../../img/p1.png'); 
+    top: calc(50% - 87.5px); /* distance from the center */
+    left: calc(50% + 87.5px); /* distance from the center */
+    width: 100px; 
+    height: 100px;
+    background-image: url('../../static/img/p1.png'); 
     background-size: cover;
     border-radius: 50%;
 }
 
-
-
+.p2 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 35px); /* distance from the center */
+    left: calc(50% + 35px); /* distance from the center */
+    width: 30px; 
+    height: 30px;
+    background-image: url('../../static/img/p2.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
 
 .p3 {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 105px); /* distance from the center */
-    left: calc(50% + 105px); /* distance from the center */
-    width: 70px; 
-    height: 70px;
-    background-image: url('../../img/p3.png'); 
+    top: calc(50% - 52.5px); /* distance from the center */
+    left: calc(50% + 52.5px); /* distance from the center */
+    width: 45px; 
+    height: 45px;
+    background-image: url('../../static/img/p3.png'); 
     background-size: cover;
     border-radius: 50%;
 }
@@ -251,11 +240,11 @@ section{
 .p4 {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 265px); /* distance from the center */
-    left: calc(50% + 265px); /* distance from the center */
+    top: calc(50% - 132.5px); /* distance from the center */
+    left: calc(50% + 132.5px); /* distance from the center */
     width: 50px; 
     height: 50px;
-    background-image: url('../../img/p4.png'); 
+    background-image: url('../../static/img/p9.png'); 
     background-size: cover;
     border-radius: 50%;
 }
@@ -263,11 +252,23 @@ section{
 .p5 {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 316px); /* distance from the center */
-    left: calc(50% + 316px); /* distance from the center */
-    width: 75px; 
-    height: 75px;
-    background-image: url('../../img/p5.png'); 
+    top: calc(50% - 158px); /* distance from the center */
+    left: calc(50% + 158px); /* distance from the center */
+    width: 60px; 
+    height: 60px;
+    background-image: url('../../static/img/p5.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p5-1 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 158px); /* distance from the center */
+    left: calc(50% + 158px); /* distance from the center */
+    width: 60px; 
+    height: 60px;
+    background-image: url('../../static/img/p7.png'); 
     background-size: cover;
     border-radius: 50%;
 }
@@ -275,11 +276,23 @@ section{
 .p6 {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 390px); /* distance from the center */
-    left: calc(50% + 390px); /* distance from the center */
-    width: 100px; 
-    height: 100px;
-    background-image: url('../../img/p6.png'); 
+    top: calc(50% - 195px); /* distance from the center */
+    left: calc(50% + 195px); /* distance from the center */
+    width: 50px; 
+    height: 50px;
+    background-image: url('../../static/img/p6.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p7 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 195px); /* distance from the center */
+    left: calc(50% + 195px); /* distance from the center */
+    width: 50px; 
+    height: 50px;
+    background-image: url('../../static/img/p7.png'); 
     background-size: cover;
     border-radius: 50%;
 }
@@ -287,24 +300,22 @@ section{
 .p10 {
     position: absolute;
     /* Set polar coordinates for planet position */
-    top: calc(50% - 425px); /* distance from the center */
-    left: calc(50% + 425px); /* distance from the center */
-    width: 40px; 
-    height: 40px;
-    background-image: url('../../img/p10.png'); 
+    top: calc(50% - 212.5px); /* distance from the center */
+    left: calc(50% + 212.5px); /* distance from the center */
+    width: 30px; 
+    height: 30px;
+    background-image: url('../../static/img/p10.png'); 
     background-size: cover;
     border-radius: 50%;
 }
-
-
 
 .orbit-container--1 {
     position: relative;
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 210px;
-    height: 210px;
+    width: 105px;
+    height: 105px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
@@ -316,8 +327,8 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
@@ -329,8 +340,8 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 250px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
@@ -342,11 +353,10 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 750px;
-    height: 750px;
-    border: 2px dashed #ccc;
+    width: 375px;
+    height: 375px;
+    border: 1px dashed #ccc;
     border-radius: 50%;
-    border-width: 1px;
     display: flex;
     justify-content: center;
 }
@@ -356,8 +366,8 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 900px;
-    height: 900px;
+    width: 450px;
+    height: 450px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
@@ -369,8 +379,8 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 1100px;
-    height: 1100px;
+    width: 550px;
+    height: 550px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
@@ -382,13 +392,14 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 1200px;
-    height: 1200px;
+    width: 600px;
+    height: 600px;
     border: 1px dashed #ccc;
     border-radius: 50%;
     display: flex;
     justify-content: center;
 }
+
 
 .hidden{
     opacity:0;
@@ -421,4 +432,14 @@ nav a{
     text-decoration: none;
     color: #eae6da;
     padding: 0 1.5rem;
+}
+
+.center-text{
+    text-align: center;
+    max-width: 70%;
+}
+
+.left-text{
+    text-align: justify;
+    max-width: 70%;
 }
