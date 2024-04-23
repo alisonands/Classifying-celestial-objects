@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <!-- LOCAL CSS -->
+    <link rel="stylesheet" href="../static/css/3scroll.css">
+    <link rel="stylesheet" href="../static/css/3meteor.css">
+
+    <!-- GOOGLE POPPINS FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!-- Include React library -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- Include ReactDOM library -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- FONTAWESOME -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- BOOTSTRAP -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <div class="star-background"></div>
+
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+        <div class="meteor"></div>
+
+    <!-- <div class="small"></div> -->
+    <!-- <div class="small class='fa-solid fa-star'"></div> -->
+    <nav>
+        <div class="logo"><a href="index.html">HOME</a></div>
+        <div class="nav-items">
+            <a href="4_ML.html">MASS</a>
+            <a href="5_stars_and_galaxies.html">STAR OR GALAXY</a>
+        </div>
+    </nav>
+    <section class="hidden">
+        <!-- <button type="button" class="btn">Base class</button> -->
+        <div class="orbit-container-4 rotate-200s">
+            <div class="p10 rotate-10s"></div>
+            <div class="orbit-container-3 rotate-200s">
+                <div class="p6 rotate-10s"></div>
+                <div class="orbit-container-2_5 rotate--150s">
+                    <div class="p5 rotate-10s"></div>
+                    <div class="orbit-container-2 rotate--50s">
+                        <div class="p4 rotate-10s"></div>
+                        <div class="orbit-container-1 rotate-20s">
+                            <div class="p1 rotate-10s"></div>
+                            <div class="orbit-container rotate-50s">
+                                <div class="p3 rotate-10s"></div>
+                                <div class="orbit-container--1 rotate--10s">
+                                    <div class="p2 rotate-10s"></div>
+                                    <a href="4_ML.html">
+                                        <div class="button rotate-20s">
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class='hidden'>
+        <h1>Applying Machine Learning Methods to celestial objects</h1>
+        <p class="center-text">The goal of this project focusses on applying regression and classification machine learning methods to two datasets:
+            <ol class="left-text">
+                <li>
+                    The mass of stars, planets, and other celestial bodies are 
+                    determined through their relationships with flux, density, 
+                    temperature, and radii. Can machine learning models predict 
+                    the mass of planets without this knowledge? We apply other 
+                    factors of the planetary system, such as ellipticity of the 
+                    orbits and the light curve of the star to Decision Tree and 
+                    Random Forest Classifiers, to determine if ML models can derive 
+                    relationships between variables.
+                </li>
+                <br>
+                <li>
+                    Distinguishing between stars, galaxies, and QSOs. <br>
+                    A common method of analysis when distinguishing between dots 
+                    of light in the sky is through analysis of the light that they 
+                    emit. Using the spectral bands u, g, r, i, and z of three classes 
+                    of objects (galaxies, QSOs and stars), we will test between SVC, 
+                    Decision Trees, and Random Forests, to determine if we can develop 
+                    a strong model to predict the classification of these objects, and 
+                    which model returns the highest accuracy.
+                </li>
+            </ol>
+        </p>
+
+    </section>
+    <section class='hidden'>
+        <img class="rotate" src="../static/img/planets.png" alt="planet-with-ring" style="width: 50%;">
+        <p>
+            
+        </p>
+    </section>
+    <section class='hidden'>
+        <p>
+            Another test section bloop
+        </p>
+    </section>
+
+</body>
+
+<script src="../static/js/3cursor.js"></script>
+<script src="../static/js/3scroll.js"></script>
+<script src="../static/js/3meteor.js"></script>
+
+</html>

@@ -1,0 +1,445 @@
+/* .cursor{
+    cursor: none;
+} */
+
+/* .cursor-dot{
+    width: 6px;
+    height: 6px;
+    border: 2px solid #eae6da;
+    border-radius: 50%;
+  } */
+
+.small{
+    top: 0;
+    left:0;
+    width: 1px;
+    height: 1px;
+    border: 2px solid #eae6da;
+    border-radius: 50%;
+    background-color: #eae6da;
+    z-index: 9999;
+    position: relative;
+    animation: moveMeteor 5s linear infinite; 
+}  
+
+body{
+    background-color: #10100f;
+    color: #eae6da;
+    font-family: 'Poppins', sans-serif;
+    padding:0;
+    margin:0;
+    /* cursor: none; */
+    /* background-image: url('img/stardust.png'); */
+    /* opacity: 0.5; */
+}
+.star-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    pointer-events: none;
+    background-size: cover; /* Ensures the background image covers the entire background area */
+    background-position: center; /* Centers the background image */
+    pointer-events: none;
+    z-index: -1;
+    /* animation: spin-cclockwise 100s linear infinite; */
+}
+
+section{
+    display: grid;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.rotate-10s{
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* width: 150px; */
+    /* height: 150px; */
+    /* margin: -60px 0 0 -280px; */
+    -webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+}
+.rotate--10s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 10s linear infinite;
+    -moz-animation: spin-cclockwise 10s linear infinite;
+    animation: spin-cclockwise 10s linear infinite;
+}
+
+.rotate-20s{
+    position: relative;
+    -webkit-animation: spin 20s linear infinite;
+    -moz-animation: spin 20s linear infinite;
+    animation: spin 20s linear infinite;
+}
+.rotate--20s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 20s linear infinite;
+    -moz-animation: spin-cclockwise 20s linear infinite;
+    animation: spin-cclockwise 20s linear infinite;
+}
+
+
+.rotate-50s{
+    position: relative;
+    -webkit-animation: spin 50s linear infinite;
+    -moz-animation: spin 50s linear infinite;
+    animation: spin 50s linear infinite;
+}
+.rotate--50s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 50s linear infinite;
+    -moz-animation: spin-cclockwise 50s linear infinite;
+    animation: spin-cclockwise 50s linear infinite;
+}
+
+.rotate-100s{
+    position: relative;
+    -webkit-animation: spin 100s linear infinite;
+    -moz-animation: spin 100s linear infinite;
+    animation: spin 100s linear infinite;
+}
+.rotate--100s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 100s linear infinite;
+    -moz-animation: spin-cclockwise 100s linear infinite;
+    animation: spin-cclockwise 100s linear infinite;
+}
+.rotate-150s{
+    position: relative;
+    -webkit-animation: spin 150s linear infinite;
+    -moz-animation: spin 150s linear infinite;
+    animation: spin 150s linear infinite;
+}
+.rotate--150s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 150s linear infinite;
+    -moz-animation: spin-cclockwise 150s linear infinite;
+    animation: spin-cclockwise 150s linear infinite;
+}
+
+.rotate-200s{
+    position: relative;
+    -webkit-animation: spin 200s linear infinite;
+    -moz-animation: spin 200s linear infinite;
+    animation: spin 200s linear infinite;
+}
+
+.rotate--200s{
+    position: relative;
+    -webkit-animation: spin-cclockwise 200s linear infinite;
+    -moz-animation: spin-cclockwise 200s linear infinite;
+    animation: spin-cclockwise 200s linear infinite;
+}
+
+@-webkit-keyframes spin{
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spin{
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin{
+    100% {-webkit-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes spin-cclockwise {
+    100% {
+        -webkit-transform: rotate(-360deg);
+        transform: rotate(-360deg); 
+    }
+}
+
+@-moz-keyframes spin-cclockwise {
+    100% {
+        -moz-transform: rotate(-360deg);
+        transform: rotate(-360deg); 
+    }
+}
+
+@keyframes spin-cclockwise {
+    100% {
+        transform: rotate(-360deg); 
+    }
+}
+
+.button {
+    height: 35px; /* Adjust height */
+    width: 35px; /* Adjust width */
+    background-color: #eae6da; 
+    border: 1px solid #eae6da; /* Adjust border */
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    color: #2c2a26;
+    line-height: 45px; /* Adjust line-height */
+    padding: 0; /* Remove padding */
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: #2c2a26;
+    display: inline-block;
+    font-size: 25px; /* Adjust font size */
+    border-radius: 50%;
+}
+
+.button:hover {
+    background-color: #131316; 
+    color: #eae6da;
+}
+
+.button:active {
+    background-color: #131316;
+    box-shadow: 0 2px #eae6da;
+    transform: translateX(2px);
+}
+
+.p1 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 87.5px); /* distance from the center */
+    left: calc(50% + 87.5px); /* distance from the center */
+    width: 100px; 
+    height: 100px;
+    background-image: url('../../static/img/p1.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p2 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 35px); /* distance from the center */
+    left: calc(50% + 35px); /* distance from the center */
+    width: 30px; 
+    height: 30px;
+    background-image: url('../../static/img/p2.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p3 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 52.5px); /* distance from the center */
+    left: calc(50% + 52.5px); /* distance from the center */
+    width: 45px; 
+    height: 45px;
+    background-image: url('../../static/img/p3.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p4 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 132.5px); /* distance from the center */
+    left: calc(50% + 132.5px); /* distance from the center */
+    width: 50px; 
+    height: 50px;
+    background-image: url('../../static/img/p9.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p5 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 158px); /* distance from the center */
+    left: calc(50% + 158px); /* distance from the center */
+    width: 60px; 
+    height: 60px;
+    background-image: url('../../static/img/p5.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p5-1 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 158px); /* distance from the center */
+    left: calc(50% + 158px); /* distance from the center */
+    width: 60px; 
+    height: 60px;
+    background-image: url('../../static/img/p7.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p6 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 195px); /* distance from the center */
+    left: calc(50% + 195px); /* distance from the center */
+    width: 50px; 
+    height: 50px;
+    background-image: url('../../static/img/p6.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p7 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 195px); /* distance from the center */
+    left: calc(50% + 195px); /* distance from the center */
+    width: 50px; 
+    height: 50px;
+    background-image: url('../../static/img/p7.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.p10 {
+    position: absolute;
+    /* Set polar coordinates for planet position */
+    top: calc(50% - 212.5px); /* distance from the center */
+    left: calc(50% + 212.5px); /* distance from the center */
+    width: 30px; 
+    height: 30px;
+    background-image: url('../../static/img/p10.png'); 
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.orbit-container--1 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 105px;
+    height: 105px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container-1 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 250px;
+    height: 250px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container-2 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 375px;
+    height: 375px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container-2_5 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 450px;
+    height: 450px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container-3 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 550px;
+    height: 550px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container-4 {
+    position: relative;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    width: 600px;
+    height: 600px;
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.hidden{
+    opacity:0;
+    transition: all 7s;
+
+}
+
+.show{
+    opacity: 1;
+}
+
+nav{
+    height: 80px;
+    /* background: rgb(119, 46, 195); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw-1300px)/2)
+}
+
+.logo{
+    color: #eae6da;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: #eae6da;
+    padding: 0 1.5rem;
+}
+
+.center-text{
+    text-align: center;
+    max-width: 70%;
+}
+
+.left-text{
+    text-align: justify;
+    max-width: 70%;
+}
