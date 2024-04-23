@@ -23,6 +23,7 @@
 </head>
 
 <body>
+    <div class="star-background"></div>
     <div class="cursor small class='fa-solid fa-star'"></div>
     <nav>
         <div class="logo"><a href="3scroll.html">HOME</a></div>
@@ -128,41 +129,65 @@
     </section>
 
     <section class="hidden">
-        <table>
-            <tr>
-              <th>precision</th>
-              <th>recall</th>
-              <th>f1-score</th>
-              <th>support</th>
-            </tr>
-            <tr>
-              <td>0.95</td>
-              <td>0.93</td>
-              <td>0.94</td>
-              <td>6237 (GALAXY)</td>
-            </tr>
-            <tr>
-              <td>0.69</td>
-              <td>0.76</td>
-              <td>0.72</td>
-              <td>983 (QSO)</td>
-            </tr>
-            <tr>
-              <td>0.85</td>
-              <td>0.87</td>
-              <td>0.86</td>
-              <td>3280 (STAR)</td>
-            </tr>
-            <tr>
-              <td colspan="4">accuracy: 0.90 (total samples: 10500)</td>
-            </tr>
-            <tr>
-              <td colspan="4">macro avg: precision: 0.83, recall: 0.85, f1-score: 0.84, support: 10500</td>
-            </tr>
-            <tr>
-              <td colspan="4">weighted avg: precision: 0.90, recall: 0.90, f1-score: 0.90, support: 10500</td>
-            </tr>
-          </table>
+      <h3>Dataset analysis</h3>
+      <iframe src="img/sqg_counts.html" width="600" height="400" frameborder="0"></iframe>
+      <p>The highest population of the dataset are classified as galaxies. 
+        The total number of training rows is 35000.
+      </p>
+    </section>
+
+    <section class = "hidden">
+      <iframe src="img/sog_cm.html" width="900" height="500" frameborder="0"></iframe>
+      <p class="center-text"> By comparing the confusion matrices of decision trees and random forests, they both return strong predictions for all three classes.
+        It returns the fewest true counts for QSOs, given that this class had the least number of value counts in the dataset.
+        Overall, we can deduce that the random forest performs better than decision trees. It returned a overall higher number of true positives,
+        compared to the false values.
+      </p>
+    </section>
+
+    <section class="hidden">
+      <h2>The Metrics</h2>
+      <table border="1">
+        <tr style="background-color: #403e39;">
+          <th>Class</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-score</th>
+        </tr>
+        <tr>
+          <td>GALAXY</td>
+          <td>0.95</td>
+          <td>0.93</td>
+          <td>0.94</td>
+        </tr>
+        <tr>
+          <td>QSO</td>
+          <td>0.69</td>
+          <td>0.76</td>
+          <td>0.72</td>
+        </tr>
+        <tr>
+          <td>STAR</td>
+          <td>0.85</td>
+          <td>0.87</td>
+          <td>0.86</td>
+        </tr>
+      </table>
+      <br>
+      <p class="center-text">
+      Overall, the classification results from the random forest regressor yields promising results.
+      Galaxies have the highest precision and recall scores, whereas QSOs have the lowest. Form the metrics,
+      this model to determine whether a class is a galaxy or a star, the lowest metric of stars, the precision,
+      yields a strong 85%. Combined with other factors such as redshifts, these models can be trained to yield
+      results with higher accuracy. QSOs were not predicted to an optimal standard, and we can conclude that more
+      varaibles will likely be required to be able to better predict QSO objects. 
+    </p>
+    </section>
+
+
+    <section>
+      ~THE END~
+      <img src="img/astronaut.png" alt="astronaut" style="width: 20%; padding-left: 15px;">
     </section>
 </body>
 

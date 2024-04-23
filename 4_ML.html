@@ -63,70 +63,91 @@
             variables.
         </p>
     </section>
-    <section class="hidden">
-        <p>The following is a sample of the dataset. The mass will be the y variable trained on the other properties.
-        </p>
-        <table>
-            <thead>
-                <tr>
-                    <th>name</th>
-                    <th>radius</th>
-                    <th>semi_major_axis</th>
-                    <th>eccentricity</th>
-                    <th>angular_distance</th>
-                    <th>orbital_period</th>
-                    <th style="background-color: #403e39;">mass</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2M 2140+16 b</td>
-                    <td>0.9200</td>
-                    <td>3.530000</td>
-                    <td>0.2600</td>
-                    <td>0.141200</td>
-                    <td>7340.000000</td>
-                    <td style="background-color: #403e39;">20.00000</td>
-                </tr>
-                <tr>
-                    <td>2M 2206-20 b</td>
-                    <td>1.3000</td>
-                    <td>4.480000</td>
-                    <td>0.0000</td>
-                    <td>0.167979</td>
-                    <td>8686.000000</td>
-                    <td style="background-color: #403e39;">30.00000</td>
-                </tr>
-                <tr>
-                    <td>51 Peg b</td>
-                    <td>1.9000</td>
-                    <td>0.052000</td>
-                    <td>0.0069</td>
-                    <td>0.003537</td>
-                    <td>4.230800</td>
-                    <td style="background-color: #403e39;">0.47000</td>
-                </tr>
-                <tr>
-                    <td>55 Cnc e</td>
-                    <td>0.1737</td>
-                    <td>0.015439</td>
-                    <td>0.0280</td>
-                    <td>0.001264</td>
-                    <td>0.736548</td>
-                    <td style="background-color: #403e39;">0.02703</td>
-                </tr>
-                <tr>
-                    <td>BD-10 3166 b</td>
-                    <td>1.0300</td>
-                    <td>0.046000</td>
-                    <td>0.0104</td>
-                    <td>0.000697</td>
-                    <td>3.487800</td>
-                    <td style="background-color: #403e39;">0.46000</td>
-                </tr>
-            </tbody>
-        </table>
 
+    <section class="hidden">
+      <div>
+        <p>We use the following variables in the analysis:</p>
+        <ul style="text-align: left;">
+          <li>pl_name - Planet Name</li>
+          <li>pl_eqt - Equilibrium Temperature [K]</li>
+          <li>pl_trandep - Transit Depth [%]</li>
+          <li>st_teff - Stellar Effective Temperature [K]</li>
+          <li>st_rad - Stellar Radius [Solar Radius]</li>
+          <li>st_mass - Stellar Mass [Solar mass]</li>
+          <li>st_lum - Stellar Luminosity [log10(Solar)]</li>
+        </ul>
+      </div>
+        <p style="text-align: left;">A sample of the dataset is shown as follows. The mass will be the y variable trained on aforementioned features.
+        </p>
+        <table border="1">
+            <tr>
+              <th>pl_name</th>
+              <th>pl_eqt</th>
+              <th>pl_trandep</th>
+              <th>pl_trandur</th>
+              <th>st_teff</th>
+              <th>st_rad</th>
+              <th>st_mass</th>
+              <th>st_lum</th>
+              <th style="background-color: #403e39;">pl_masse</th>
+            </tr>
+            <tr>
+              <td>TOI-3807 b</td>
+              <td>1646.0</td>
+              <td>1.3600</td>
+              <td>1.7800</td>
+              <td>5772.0</td>
+              <td>1.47</td>
+              <td>1.18</td>
+              <td>0.332</td>
+              <td style="background-color: #403e39;">330.54154</td>
+            </tr>
+            <tr>
+              <td>TOI-4087 b</td>
+              <td>1458.0</td>
+              <td>1.1565</td>
+              <td>2.9842</td>
+              <td>6060.0</td>
+              <td>1.11</td>
+              <td>1.18</td>
+              <td>0.176</td>
+              <td style="background-color: #403e39;">232.01474</td>
+            </tr>
+            <tr>
+              <td>TOI-2818 b</td>
+              <td>1376.0</td>
+              <td>1.3000</td>
+              <td>3.8040</td>
+              <td>5721.0</td>
+              <td>1.23</td>
+              <td>0.98</td>
+              <td>0.164</td>
+              <td style="background-color: #403e39;">225.65817</td>
+            </tr>
+            <tr>
+              <td>TOI-4463 A b</td>
+              <td>1395.0</td>
+              <td>1.3110</td>
+              <td>1.8500</td>
+              <td>5640.0</td>
+              <td>1.06</td>
+              <td>1.06</td>
+              <td>0.011</td>
+              <td style="background-color: #403e39;">252.35576</td>
+            </tr>
+            <tr>
+              <td>TOI-3785 b</td>
+              <td>582.0</td>
+              <td>0.9254</td>
+              <td>1.7000</td>
+              <td>3576.0</td>
+              <td>0.50</td>
+              <td>0.52</td>
+              <td>-1.435</td>
+              <td style="background-color: #403e39;">14.95000</td>
+            </tr>
+          </table>
+          <br>
     </section>
 
     <section class="hidden">
