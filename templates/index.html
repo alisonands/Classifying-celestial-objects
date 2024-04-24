@@ -13,11 +13,6 @@
     <!-- GOOGLE POPPINS FONT -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-    <!-- Include React library -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <!-- Include ReactDOM library -->
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
     <!-- FONTAWESOME -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -48,23 +43,26 @@
     <nav>
         <div class="logo"><a href="index.html">HOME</a></div>
         <div class="nav-items">
-            <a href="4_ML.html">MASS</a>
-            <a href="5_stars_and_galaxies.html">STAR OR GALAXY</a>
+            <a href="4_ML.html">EXOPLANETS</a>
+            <a href="5_stars_and_galaxies.html">STARS OR GALAXIES</a>
         </div>
     </nav>
 
-    <section class='hidden'>
-        <h1>Applying Machine Learning Methods to celestial objects</h1>
-
+    <section class="hidden">
+        <img src="../static/img/planet.png" alt="astronaut" style="width: 30%;">
+        <div>
+            <h1>Applying Machine Learning Methods to celestial objects</h1>
+        </div>
     </section>
 
-    <section>
+    <section class="hidden">
         <table>
             <thead>
                 <tr>
                     <th></th>
                     <th>
-                        <h2 style="text-align: left;">Exoplanets</h2>
+                        <h2 style="text-align: left;"> <a href="4_ML.html" style="color: #e3e0d6;">Exoplanets</a> 
+                        </h2>
                     </th>
                 </tr>
             </thead>
@@ -85,7 +83,7 @@
                     <td></td>
                     <td>
                         <h2 style="text-align: left;">
-                            Classifying Stars, Galaxies and QSOs
+                            <a href="5_stars_and_galaxies.html" style="color: #e3e0d6;">Classifying Stars, Galaxies and QSOs</a> 
                         </h2>
                     </td>
                 </tr>
@@ -105,6 +103,8 @@
         </table>
     </section>
 
+    <section-break></section-break>
+
     <section class="hidden">
         <!-- <button type="button" class="btn">Base class</button> -->
         <div class="orbit-container-4 rotate-200s">
@@ -121,10 +121,11 @@
                                 <div class="p3 rotate-10s"></div>
                                 <div class="orbit-container--1 rotate--10s">
                                     <div class="p2 rotate-10s"></div>
-                                    <a href="4_ML.html">
-                                        <div class="button rotate-20s">
-                                            <i class="fa-solid fa-star"></i>
+                                    <a href="#" id="generateButton">
+                                        <div class="button rotate-20s" onclick="generateURL()">
+                                            <i class="fa-regular fa-sun"></i>
                                         </div>
+                                        <!-- <p id="url"></p> -->
                                     </a>
                                 </div>
                             </div>
@@ -139,12 +140,6 @@
         <img class="rotate" src="../static/img/planets.png" alt="planet-with-ring" style="width: 50%;">
         <p>
 
-        </p>
-    </section>
-
-    <section class='hidden'>
-        <p>
-            Another test section bloop
         </p>
     </section>
 

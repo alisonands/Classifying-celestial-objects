@@ -10,3 +10,19 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el))
+
+
+// random url generator
+document.getElementById('generateButton').addEventListener('click', function(event) {
+    // event.preventDefault(); 
+    generateURL();
+});
+
+function generateURL() {
+    fetch('/random_planet_url')
+        .then(response => response.text())
+        .then(url => {
+            // Navigate to the generated URL
+            window.location.href = url;
+        });
+}
