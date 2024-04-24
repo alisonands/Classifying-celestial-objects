@@ -17,6 +17,7 @@
 
 ## References
 - [Wavelengths](https://voyages.sdss.org/preflight/light/filters/)
+- [Detecting Exoplanets](http://www.astro.gsu.edu/lab/Supplemental_labs/supplemental_labs_files/exoplanets/Exoplanet_writeup.pdf)
 
 ## Space
 [Exoplanets](https://exoplanet.eu/catalog/)
@@ -24,7 +25,6 @@
 [SDSS](https://dr18.sdss.org/)
 [SDSS skysurvey](https://skyserver.sdss.org/dr9/en/help/browser/browser.asp)
 [SQL queries](https://skyserver.sdss.org/dr9/en/tools/search/sql.asp)
-
 
 ### Resources
 - [TeX for html](https://www.maths.nottingham.ac.uk/plp/pmadw/lm.html)
