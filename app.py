@@ -18,7 +18,7 @@ def sqg_5():
 
 @app.route('/random_planet_url')
 def random_planet_url():
-    data = pd.read_csv('website_template/hwc_table_all.csv')
+    data = pd.read_csv('hwc_table_all.csv')
     planet = random.choice(data['Name'].tolist())
     planet = planet.replace(" ", "")
     url = f'https://exoplanetarchive.ipac.caltech.edu/overview/{planet}'
