@@ -40,11 +40,10 @@ body{
     height: 100%;
     background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
     pointer-events: none;
-    background-size: cover; /* Ensures the background image covers the entire background area */
-    background-position: center; /* Centers the background image */
+    background-size: cover; 
+    background-position: center; 
     pointer-events: none;
     z-index: -1;
-    /* animation: spin-cclockwise 100s linear infinite; */
 }
 
 section{
@@ -172,21 +171,21 @@ section{
 }
 
 .button {
-    height: 35px; /* Adjust height */
-    width: 35px; /* Adjust width */
+    height: 140px; 
+    width: 140px; 
     background-color: #eae6da; 
-    border: 1px solid #eae6da; /* Adjust border */
+    border: 2.25px solid #eae6da; 
     align-items: center;
     place-content: center;
     place-items: center;
     color: #2c2a26;
-    line-height: 45px; /* Adjust line-height */
-    padding: 0; /* Remove padding */
+    line-height: 101.25px; 
+    padding: 0; 
     text-align: center;
     text-decoration: none;
     text-decoration-color: #2c2a26;
     display: inline-block;
-    font-size: 25px; /* Adjust font size */
+    font-size: 100px;
     border-radius: 50%;
 }
 
@@ -197,17 +196,16 @@ section{
 
 .button:active {
     background-color: #131316;
-    box-shadow: 0 2px #eae6da;
-    transform: translateX(2px);
+    box-shadow: 0 4.5px #eae6da;
+    transform: translateX(4.5px);
 }
 
 .p1 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 87.5px); /* distance from the center */
-    left: calc(50% + 87.5px); /* distance from the center */
-    width: 100px; 
-    height: 100px;
+    top: calc(50% - 196.875px); 
+    left: calc(50% + 196.875px); 
+    width: 225px; 
+    height: 225px; 
     background-image: url('../../static/img/p1.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -215,11 +213,10 @@ section{
 
 .p2 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 35px); /* distance from the center */
-    left: calc(50% + 35px); /* distance from the center */
-    width: 30px; 
-    height: 30px;
+    top: calc(50% - 67.5px); 
+    left: calc(50% + 67.5px); 
+    width: 90px; 
+    height: 90px; 
     background-image: url('../../static/img/p2.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -227,11 +224,10 @@ section{
 
 .p3 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 52.5px); /* distance from the center */
-    left: calc(50% + 52.5px); /* distance from the center */
-    width: 45px; 
-    height: 45px;
+    top: calc(50% - 121.5px); 
+    left: calc(50% + 121.5px); 
+    width: 157.5px; 
+    height: 157.5px; 
     background-image: url('../../static/img/p3.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -239,11 +235,10 @@ section{
 
 .p4 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 132.5px); /* distance from the center */
-    left: calc(50% + 132.5px); /* distance from the center */
-    width: 50px; 
-    height: 50px;
+    top: calc(50% - 298.125px); 
+    left: calc(50% + 298.125px); 
+    width: 112.5px; 
+    height: 112.5px; 
     background-image: url('../../static/img/p9.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -251,11 +246,10 @@ section{
 
 .p5 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 158px); /* distance from the center */
-    left: calc(50% + 158px); /* distance from the center */
-    width: 60px; 
-    height: 60px;
+    top: calc(50% - 356.25px); 
+    left: calc(50% + 356.25px); 
+    width: 135px; 
+    height: 135px; 
     background-image: url('../../static/img/p5.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -263,11 +257,10 @@ section{
 
 .p5-1 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 158px); /* distance from the center */
-    left: calc(50% + 158px); /* distance from the center */
-    width: 60px; 
-    height: 60px;
+    top: calc(50% - 356.25px); 
+    left: calc(50% + 356.25px); 
+    width: 135px; 
+    height: 135px; 
     background-image: url('../../static/img/p7.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -275,11 +268,10 @@ section{
 
 .p6 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 195px); /* distance from the center */
-    left: calc(50% + 195px); /* distance from the center */
-    width: 50px; 
-    height: 50px;
+    top: calc(50% - 416.25px); 
+    left: calc(50% + 416.25px); 
+    width: 180px; 
+    height: 180px; 
     background-image: url('../../static/img/p6.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -287,11 +279,10 @@ section{
 
 .p7 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 195px); /* distance from the center */
-    left: calc(50% + 195px); /* distance from the center */
-    width: 50px; 
-    height: 50px;
+    top: calc(50% - 438.75px); 
+    left: calc(50% + 438.75px); 
+    width: 112.5px; 
+    height: 112.5px; 
     background-image: url('../../static/img/p7.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -299,11 +290,10 @@ section{
 
 .p10 {
     position: absolute;
-    /* Set polar coordinates for planet position */
-    top: calc(50% - 212.5px); /* distance from the center */
-    left: calc(50% + 212.5px); /* distance from the center */
-    width: 30px; 
-    height: 30px;
+    top: calc(50% - 478.125px); 
+    left: calc(50% + 478.125px); 
+    width: 67.5px; 
+    height: 67.5px; 
     background-image: url('../../static/img/p10.png'); 
     background-size: cover;
     border-radius: 50%;
@@ -314,12 +304,13 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 105px;
-    height: 105px;
-    border: 1px dashed #ccc;
+    width: 236.25px; 
+    height: 236.25px; 
+    border: 2.25px solid rgba(204, 204, 204, 0.5); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    rotate: 180deg;
 }
 
 .orbit-container {
@@ -327,12 +318,13 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 150px;
-    height: 150px;
-    border: 1px dashed #ccc;
+    width: 337.5px; 
+    height: 337.5px; 
+    border: 2.25px solid rgba(204, 204, 204, 0.5); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    rotate: 90deg;
 }
 
 .orbit-container-1 {
@@ -340,12 +332,13 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 250px;
-    height: 250px;
-    border: 1px dashed #ccc;
+    width: 562.5px; 
+    height: 562.5px; 
+    border: 2.25px solid rgba(204, 204, 204, 0.5); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    rotate: 270deg;
 }
 
 .orbit-container-2 {
@@ -353,12 +346,13 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 375px;
-    height: 375px;
-    border: 1px dashed #ccc;
+    width: 843.75px; 
+    height: 843.75px; 
+    border: 2.25px solid rgba(204, 204, 204, 0.5); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    rotate: 120deg;
 }
 
 .orbit-container-2_5 {
@@ -366,12 +360,13 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 450px;
-    height: 450px;
-    border: 1px dashed #ccc;
+    width: 1012.5px; 
+    height: 1012.5px; 
+    border: 2.25px solid rgba(204, 204, 204, 0.5); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    rotate: 270deg;
 }
 
 .orbit-container-3 {
@@ -379,12 +374,13 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 550px;
-    height: 550px;
-    border: 1px dashed #ccc;
+    width: 1237.5px; 
+    height: 1237.5px; 
+    border: 2.25px solid rgba(204, 204, 204, 0.5); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    rotate: 225deg;
 }
 
 .orbit-container-4 {
@@ -392,13 +388,15 @@ section{
     align-items: center;
     place-content: center;
     place-items: center;
-    width: 600px;
-    height: 600px;
-    border: 1px dashed #ccc;
+    width: 1350px; 
+    height: 1350px; 
+    border: 2.25px solid rgba(204, 204, 204, 0.5); 
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    rotate:32deg;
 }
+
 
 
 .hidden{
@@ -442,4 +440,26 @@ nav a{
 .left-text{
     text-align: justify;
     max-width: 70%;
+}
+
+li {
+    list-style: none;
+  }
+  li::before {
+    content: '';
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-image: url('../img/p1.png');
+    background-size: contain;
+  }
+
+  section-break{
+    display: grid;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    min-height: 25vh;
+    /* min-width: 100vh; */
+    /* max-width: 100vh; */
 }

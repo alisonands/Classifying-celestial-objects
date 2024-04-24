@@ -13,11 +13,6 @@
     <!-- GOOGLE POPPINS FONT -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-    <!-- Include React library -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <!-- Include ReactDOM library -->
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
     <!-- FONTAWESOME -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -32,26 +27,84 @@
 <body>
     <div class="star-background"></div>
 
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
-        <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
 
     <!-- <div class="small"></div> -->
     <!-- <div class="small class='fa-solid fa-star'"></div> -->
     <nav>
         <div class="logo"><a href="index.html">HOME</a></div>
         <div class="nav-items">
-            <a href="4_ML.html">MASS</a>
-            <a href="5_stars_and_galaxies.html">STAR OR GALAXY</a>
+            <a href="4_ML.html">EXOPLANETS</a>
+            <a href="5_stars_and_galaxies.html">STARS OR GALAXIES</a>
         </div>
     </nav>
+
+    <section class="hidden">
+        <img src="../static/img/planet.png" alt="astronaut" style="width: 30%;">
+        <div>
+            <h1>Applying Machine Learning Methods to celestial objects</h1>
+        </div>
+    </section>
+
+    <section class="hidden">
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <h2 style="text-align: left;"> <a href="4_ML.html" style="color: #e3e0d6;">Exoplanets</a> 
+                        </h2>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top;"><img src="../static/img/p1.png" alt="" style="width: 200px;"></td>
+                    <td>The mass of stars, planets, and other celestial bodies are
+                        <br> determined through their relationships with flux, density,
+                        <br>temperature, and radii. Can machine learning models predict
+                        <br> the mass of planets without this knowledge? We apply other
+                        <br> factors of the planetary system, such as ellipticity of the
+                        <br> orbits and the light curve of the star to Decision Tree and
+                        <br>Random Forest Classifiers, to determine if ML models can derive
+                        <br> relationships between variables.<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h2 style="text-align: left;">
+                            <a href="5_stars_and_galaxies.html" style="color: #e3e0d6;">Classifying Stars, Galaxies and QSOs</a> 
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top;"><img src="../static/img/p10.png" alt="" style="width: 200px;"></td>
+                    <td>A common method of analysis when distinguishing between dots
+                        <br>of light in the sky is through analysis of the light that they
+                        <br>emit. Using the spectral bands u, g, r, i, and z of three classes
+                        <br>of objects (galaxies, QSOs and stars), we will test between SVC,
+                        <br>Decision Trees, and Random Forests, to determine if we can develop
+                        <br>a strong model to predict the classification of these objects, and
+                        <br>which model returns the highest accuracy.
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section-break></section-break>
+
     <section class="hidden">
         <!-- <button type="button" class="btn">Base class</button> -->
         <div class="orbit-container-4 rotate-200s">
@@ -68,10 +121,11 @@
                                 <div class="p3 rotate-10s"></div>
                                 <div class="orbit-container--1 rotate--10s">
                                     <div class="p2 rotate-10s"></div>
-                                    <a href="4_ML.html">
-                                        <div class="button rotate-20s">
-                                            <i class="fa-solid fa-star"></i>
+                                    <a href="#" id="generateButton">
+                                        <div class="button rotate-20s" onclick="generateURL()">
+                                            <i class="fa-regular fa-sun"></i>
                                         </div>
+                                        <!-- <p id="url"></p> -->
                                     </a>
                                 </div>
                             </div>
@@ -81,44 +135,11 @@
             </div>
         </div>
     </section>
-    <section class='hidden'>
-        <h1>Applying Machine Learning Methods to celestial objects</h1>
-        <p class="center-text">The goal of this project focusses on applying regression and classification machine learning methods to two datasets:
-            <ol class="left-text">
-                <li>
-                    The mass of stars, planets, and other celestial bodies are 
-                    determined through their relationships with flux, density, 
-                    temperature, and radii. Can machine learning models predict 
-                    the mass of planets without this knowledge? We apply other 
-                    factors of the planetary system, such as ellipticity of the 
-                    orbits and the light curve of the star to Decision Tree and 
-                    Random Forest Classifiers, to determine if ML models can derive 
-                    relationships between variables.
-                </li>
-                <br>
-                <li>
-                    Distinguishing between stars, galaxies, and QSOs. <br>
-                    A common method of analysis when distinguishing between dots 
-                    of light in the sky is through analysis of the light that they 
-                    emit. Using the spectral bands u, g, r, i, and z of three classes 
-                    of objects (galaxies, QSOs and stars), we will test between SVC, 
-                    Decision Trees, and Random Forests, to determine if we can develop 
-                    a strong model to predict the classification of these objects, and 
-                    which model returns the highest accuracy.
-                </li>
-            </ol>
-        </p>
 
-    </section>
     <section class='hidden'>
         <img class="rotate" src="../static/img/planets.png" alt="planet-with-ring" style="width: 50%;">
         <p>
-            
-        </p>
-    </section>
-    <section class='hidden'>
-        <p>
-            Another test section bloop
+
         </p>
     </section>
 
