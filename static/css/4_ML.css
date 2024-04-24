@@ -45,6 +45,16 @@ section{
     /* max-width: 100vh; */
 }
 
+section-break{
+    display: grid;
+    align-items: center;
+    place-content: center;
+    place-items: center;
+    min-height: 25vh;
+    /* min-width: 100vh; */
+    /* max-width: 100vh; */
+}
+
 .hidden{
     opacity:0;
     transition: all 7s;
@@ -103,4 +113,9 @@ table {
     display: block;
     margin: auto !important;
     padding-left: 350px;
+}
+
+.left-text{
+    text-align: justify;
+    max-width: 70%;
 }

@@ -46,18 +46,19 @@
     </p>
   </section>
   <section class='hidden'>
+    <h2>Motivation</h2>
     <p class="center-text">
       In observational astronomy, the mass of a celestial bodies is determined based on several physical features.
       <br>
       For example, the mass of a star can be determined by only the radius and temperature of the star, using
-      <br>$M_{\odot} = \frac{4\pi^2}{G}\left[\frac{r^2}{T^2}\right]$.
+      <br><b style="font-size: 25px;">$M_{\odot} = \frac{4\pi^2}{G}\left[\frac{r^2}{T^2}\right]$</b>.
       <br>It can also be determined from the flux or luminosity of the star, with respect to the sun, using
-      <br>$\left[\frac{L}{L_{\odot}}\right]=\left[\frac{M}{M_\odot}\right]^4$.
+      <br><b style="font-size: 25px;">$\left[\frac{L}{L_{\odot}}\right]=\left[\frac{M}{M_\odot}\right]^4$.</b>
       <br>
       <br>But what if we don't know these variables?
       <br>
-      <br>Features like the mass and radius are not immediately apparent, and can be challenging to determine.
-      <br>In this study, we test to see if we can use machine learning models on exoplanets to determine if using
+      <br>Features like the mass and radius are not immediately apparent, and can be challenging to determine. 
+      In this study, we test to see if we can use machine learning models on exoplanets to determine if using
       a range of other variables can determine the mass of a given planet.
       Specifically, we are looking for relationships between the mass of a planet and any other apparent
       variables.
@@ -65,18 +66,52 @@
   </section>
 
   <section class="hidden">
-    <div>
-      <p>We use the following variables in the analysis:</p>
-      <ul style="text-align: left;">
+    <h2>Preliminary analysis</h2>
+      Feature importances with variables radial velocity, radius and density
+      <iframe src="../static/img/feature_importance_w_var.html" width="1000" height="700" frameborder="0"></iframe>
+      <p class="center-text">
+        The graph represents the most important variables in the dataset, that contribute to determining the mass of a given planet.
+        In this study, we will take out three important variables, the radius, radial velocity, and density, to see if there is a difference in results.
+        We can also use this data as a baseline to determine the performance of the models. For a standard deviation of 535.39, the random forest
+        returns median difference of 22.68 and the decision tree returns a median difference of 31.78. 
+      </p>
+      <h3>Performance metrics</h3>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Decision Tree </th>
+            <th>Random Forest</th>
+            <th>Std</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Median difference</td>
+            <td>31.78</td>
+            <td>22.68</td>
+            <td>535.39</td>
+          </tr>
+        </tbody>
+        </table>
+  </section>
+  <section-break>
+    <br>
+  </section-break>
+  <section class="hidden">
+      <h2>The dataset</h2>
+      <p class="left-text">We use the following variables in the analysis, now dropping the radial velocity, density and radius of the planet
+        from the preliminary analysis:</p>
+      <ul>
         <li>pl_name - Planet Name</li>
         <li>pl_eqt - Equilibrium Temperature [K]</li>
         <li>pl_trandep - Transit Depth [%]</li>
+        <li>pl_trandur - Transit Duration</li>
         <li>st_teff - Stellar Effective Temperature [K]</li>
         <li>st_rad - Stellar Radius [Solar Radius]</li>
         <li>st_mass - Stellar Mass [Solar mass]</li>
         <li>st_lum - Stellar Luminosity [log10(Solar)]</li>
       </ul>
-    </div>
     <p style="text-align: left;">A sample of the dataset is shown as follows. The mass will be the y variable trained on
       aforementioned features.
     </p>
@@ -151,47 +186,69 @@
     <br>
   </section>
 
-  <section class="hidden">
+  <section class="hidden center">
     Decision Trees vs. Random Forests
-    <img src="../img/with_MTD.jpg" style="width: 75%; height: auto;">
-  </section>
-
-  <section class="hidden">
+    <p class="left-text">
+      The following graphs show a comparison between the decision tree and random forest classifications.
+      The first plots the predicted y values, y_pred, and the actual values, y_test, and compares their
+      performance. By looking at the graphs, both graphs appear to perform similarly, and there is a lower
+      correlation between the variables. We can see this in the second row more clearly, where we expect 
+      a 1:1 ratio between the y_pred and y_test variables. 
+    </p>
+    <iframe src="../static/img/comparisons_dt_rf.html" width= "1500" height="1000" frameborder = "0" ></iframe>
     Median Differences
+    <p style="text-align: justify; max-width: 50%;">
+      While random forests performed better in the preliminary analysis, taking out the three main variables
+      led to a greater error in the median differences. 
+    </p>
     <table>
       <thead>
         <tr>
-          <th></th>
-          <th>Decision Tree</th>
-          <th>Random Forest</th>
+          <th ></th>
+          <th >Decision Tree </th>
+          <th >Random Forest</th>
+          <th >Std</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>With mass, temp, dens</td>
-          <td>20.34</td>
-          <td>12.40</td>
+          <td >Median difference<br>(With dens, rv, and<br>rad)</td>
+          <td >31.78</td>
+          <td >22.68</td>
+          <td >535.39</td>
         </tr>
         <tr>
-          <td>Wo mass, temp, dens</td>
-          <td>92.65</td>
-          <td>156.08</td>
+          <td>Median difference<br>(without dens, rv,<br>and rad)</td>
+          <td>108.69</td>
+          <td>179.57</td>
+          <td>507.78</td>
         </tr>
       </tbody>
-    </table>
-  </section>
-  <section class="hidden">
-    <div class="center">
-      <iframe src="../static/img/rf.html" width="1200" height="1000" frameborder="0"></iframe>
-    </div>
+      </table> 
   </section>
 
+  <section-break>
+    <br>
+  </section-break>
+  
   <section class="hidden">
-    <iframe src="../static/img/feature_importance.html" width="1000" height="700" frameborder="0"></iframe>
-  </section>
-
-  <section class="hidden">
-    Results and final analysis
+    <h3>Feature importances without variables: results and conclusion
+    </h3>
+      <p style="text-align: justify; max-width: 60%;">
+      There are some major differences in the feature importances after taking out the three main dependent variables.
+      The biggest difference is that the equilibrium temperature of the star plays a significantly larger role in 
+      correlations in the random forest model when compared to the decision tree. On the other hand, the transit depth
+      and duration have more of a significance in the decision tree model. As random forests are a series of decision 
+      trees, we can say that the results of the feature importances can be more random due to the lack of correlation, 
+      and the fact that no variable plays a significantly greater role in determining masses. However, we do know that 
+      the mass of a star does play a role in determining the mass of each planet 
+      (more on that <a style="color: rgb(105, 173, 196);" href="http://www.astro.gsu.edu/lab/Supplemental_labs/supplemental_labs_files/exoplanets/Exoplanet_writeup.pdf">here</a>).
+      We do also know that light curves play a significant role in determining the velocity and size of a planet, 
+      which can be determined by the variables pl_trandep and pl_trandur.
+      </p>
+      <section class="hidden">
+        <iframe src="../static/img/feature_importance_wo_var.html" width="1000" height="700" frameborder="0"></iframe>
+  
   </section>
 
   <section class="hidden">
@@ -224,25 +281,16 @@
           <td>2.23e4</td>
           <td>4.78e5</td>
         </tr>
-        <tr>
-          <td>R2</td>
-          <td>9.4e-1</td>
-          <td>-3.9e-1</td>
-          <td>9.5e-1</td>
-          <td>6.0e-2</td>
-        </tr>
-        <tr>
-          <td>EVS</td>
-          <td>9.4e-1</td>
-          <td>-3.9e-1</td>
-          <td>9.5e-1</td>
-          <td>6.0e-2</td>
-        </tr>
       </tbody>
     </table>
   </section>
 
-</body>
+<section>
+  <img src="../static/img/astronaut.png" alt="astronaut" style="width: 20%; padding-left: 15px;">
+</section>
+
+ 
+
 
 <!-- <script src="2cursor.js"></script> -->
 <script src="../static/js/4_ML.js"></script>
