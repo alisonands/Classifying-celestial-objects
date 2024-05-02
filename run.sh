@@ -1,0 +1,1 @@
+FLASK_APP=astronomy-ds-app/app.py flask run
