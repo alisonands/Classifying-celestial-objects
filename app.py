@@ -12,9 +12,9 @@ def index():
 def ml_4():
     return render_template('exo_mass.html')
 
-@app.route('/5_stars_and_galaxies.html')
+@app.route('/stars_and_galaxies.html')
 def sqg_5():
-    return render_template('5_stars_and_galaxies.html')
+    return render_template('stars_and_galaxies.html')
 
 @app.route('/random_planet_url')
 def random_planet_url():
