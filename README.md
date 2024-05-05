@@ -4,6 +4,8 @@
 2. Distinguishing between stars, galaxies, and QSOs.
 - A common method of analysis when distinguishing between dots of light in the sky is through analysis of the light that they emit. Using the spectral bands u, g, r, i, and z of three classes of objects (galaxies, QSOs and stars), we will test between SVC, Decision Trees, and Random Forests, to determine if we can develop a strong model to predict the classification of these objects, and which model returns the highest accuracy.
 
+Now deployed here: [Applying Machine Learning Methods to celestial objects](http://alisonands.pythonanywhere.com/)
+
 ## Project overview
 ### 1. Exoplanets
 In predicting the mass of stars, we will test the dataset against Decision Tree and Random Forest regression models from scikit-learn, and compare the metrics to determine which model performs better.
