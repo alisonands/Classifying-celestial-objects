@@ -14,7 +14,7 @@ hiddenElements.forEach((el) => observer.observe(el))
 
 // random url generator
 document.getElementById('generateButton').addEventListener('click', function(event) {
-    // event.preventDefault(); 
+    event.preventDefault(); 
     generateURL();
 });
 
